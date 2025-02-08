@@ -1,13 +1,13 @@
 ---
-id: og-da-deep-dive
+id: 0g-da-deep-dive
 title: Technical Deep Dive
 sidebar_position: 2
 ---
 # 0G DA Technical Deep Dive
 
-The Data Availability (DA) module allows users to submit a piece of data, referred to as a _**DA blob**_. This data is redundantly encoded by the client's proxy and divided into several slices, which are then sent to DA nodes. _**DA nodes**_ gain eligibility to verify the correctness of DA slices by staking. Each DA node verifies the integrity and correctness of its slice and signs it. Once more than 2/3 of the aggregated signatures are on-chain, the data behind the related hash is considered to be decentralized published.
+The Data Availability (DA) module allows users to submit a piece of data, referred to as a _**DA blob**_. This data is redundantly encoded by the client's proxy and divided into several slices, which are then sent to DA nodes. _**DA nodes**_ gain eligibility to verify the correctness of DA slices by staking. Each DA node verifies the integrity and correctness of its slice and signs it. Once more than 2/3 of the aggregated signatures are on-chain, the data behind the related hash is considered to be published decentrally.
 
-To incentivize DA nodes to store the signed data for a period, the signing process itself does not provide any rewards. Instead, rewards are distributed through a process called _**DA Sampling**_. During each DA Sample round, any DA slice within a certain time frame can generate a lottery chance for a reward. DA nodes need to actually store the corresponding slice to redeem the lottery chance and claim the reward.
+To incentivize DA nodes to store the signed data for a period, the signing process itself does not provide any rewards. Instead, rewards are distributed through a process called _**DA Sampling**_. During each DA Sample round, any DA slice within a certain timeframe can generate a lottery chance for a reward. DA nodes must store the corresponding slice to redeem the lottery chance and claim the reward.
 
 The process of generating DA nodes is the same as the underlying chain's PoS process, both achieved through staking. During each DA epoch (approximately 8 hours), DA nodes are assigned to several quorums. Within each quorum, nodes are assigned numbers 0 through 3071. Each number is assigned to exactly one node, but a node may be assigned to multiple quorums, depending on its staking weight.
 
@@ -84,11 +84,10 @@ Admin adjustable parameters
 
 During each period, each DA slice (one row) can be divided into 32 sub-lines. For each sub-line, the `podasQuality` will be computed using the `dataRoot` and assigned `epoch` and `quorumId` of its corresponding DA blob.
 
-\<aside> 💡 By default, all integers are in 256-bit big-endian format when computing hash values. `lineIndex` is the only exception, which is in 64-bit big-endian format.
+
+> 💡 By default, all integers are in 256-bit big-endian format when computing hash values. `lineIndex` is the only exception, which is in 64-bit big-endian format.
 
 The hash value can be viewed interchangeably as either 32 bytes of data or a 256-bit big-endian integer.
-
-\</aside>
 
 ```python
 lineQuality = keccak256(sampleSeed, epoch, quorumId, dataRoot, lineIndex);
@@ -135,7 +134,7 @@ When a DA epoch ends, all the rewards from that DA epoch will be stored in the D
 
 In the early stages of the ecosystem, the foundation can reserve a portion of tokens for system rewards. When the DA node submits a valid response, an additional reward of `BASE_REWARD` will be issued.
 
-The funds for the base reward will be manually deposited into the reward contract and tracked separately. If the balance for the base reward is insufficient to cover a signle base reward, miners will not be able to receive the full base reward.
+The funds for the base reward will be manually deposited into the reward contract and tracked separately. If the balance for the base reward is insufficient to cover a single base reward, miners will not be able to receive the full base reward.
 
 ### Service Fee
 

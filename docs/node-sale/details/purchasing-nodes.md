@@ -12,13 +12,21 @@ sidebar_position: 1
 Please note: Initially, the Public Sale was intended to use wETH on Arbitrum, but after the community’s feedback, it will be USDC on Arbitrum. Please note this correction to USDC on Arbitrum as the video says wETH.
 :::
 
-https://www.youtube.com/watch?v=Z2QHJfjqCtM&ab_channel=0G
+<iframe
+    width="100%"
+    height="400"
+    src="https://www.youtube.com/embed/Z2QHJfjqCtM"
+    title="Node Purchase Tutorial"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+></iframe>
 
 Note that this video is for demonstrative purposes only, may not reflect exact details and have different prices or tokens than the actual sale.
 
 ## Step-by-Step Purchase Process:
 ### Step 1 - Go to https://node.0gfoundation.ai and connect your wallet
-### Step 2 - Select the chain and token you want to purchase in 
+### Step 2 - Select the chain and token you want to purchase  
 ### Step 3 - View the tiers available and purchase
 In total there are 32 available for purchase. If you hold a whitelisted address, the Tier that you are entitled to will be shown on the top. Sold out tiers will be moved to the bottom of the page.
 ### Step 4 - Set the quantity

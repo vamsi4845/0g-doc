@@ -1,10 +1,15 @@
 ---
 sidebar_position: 3
 ---
+
+import MetaMaskButton from '@site/src/components/MetaMaskButton';
+
 # Testnet Information
 ---
 
 Welcome to Testnet-V2, where you can contribute to our network by operating various node types, including Validator, Storage, and DA (Data Availability) nodes. This page provides an overview of the testnet process and important information for participants.
+
+<MetaMaskButton />
 
 ## 0G Testnet Configuration
 
@@ -14,7 +19,7 @@ Summary Table
 | Chain Name | 0G-Newton-Testnet |
 | Chain ID | 16600 (`zgtendermint_16600-2`) |
 | Token Symbol | A0GI |
-| **Recommended RPC** - Thirdweb  | https://16600.rpc.thirdweb.com/ |
+| **Recommended RPC** - Thirdweb | https://16600.rpc.thirdweb.com/ |
 | RPC - Ankr | https://rpc.ankr.com/0g_newton |
 | RPC | https://evmrpc-testnet.0g.ai |
 | Storage Indexer Standard RPC | https://indexer-storage-testnet-standard.0g.ai |
@@ -30,14 +35,17 @@ Summary Table
 ### Highly Recommended Third-party RPCs
 
 - [Thirdweb](https://thirdweb.com/0g-newton-testnet)
-- [Ankr](https://rpc.ankr.com/0g_newton)
+- [Ankr](https://www.ankr.com/rpc/0g/)
+- [QuickNode](https://www.quicknode.com/chains/0g)
 
-### Community RPCs and Resources 
+### Community RPCs and Resources
 
-- [Originstake](https://0g-json-rpc-public.originstake.com)
-- [Validatorvn](https://0g-rpc-evm01.validatorvn.com)
-- [Itrocket](https://og-testnet-jsonrpc.itrocket.net)
-- [Zstake](https://0g-evmrpc.zstake.xyz/)
+| Provider | RPC Endpoint |
+|----------|--------------|
+| Originstake | https://0g-json-rpc-public.originstake.com |
+| Validatorvn | https://0g-rpc-evm01.validatorvn.com |
+| Itrocket | https://og-testnet-jsonrpc.itrocket.net |
+| Zstake | https://0g-evmrpc.zstake.xyz/ |
 
 :::caution
 Do not rely on the free community endpoints listed above for production deployments. Production deployments should rely on service providers with SLAs or your own node.
@@ -95,6 +103,6 @@ In Testnet-V2, we've implemented a fair and transparent process for selecting va
 :::important note
 The validator selection process described here applies **only to the testnet**. Mainnet will have a different selection mechanism.
 While it's possible to run nodes (ex: DA node vs Validator Node) independently, your chances of being selected as a _validator_ increases if you run multiple node types. 
-If your validator is selected, it will manually be delegated by our team within a few days.
-If you have any questions, reach out to us on [discord](https://discord.com/invite/0glabs)
+If your validator is selected, it will be manually delegated by our team within a few days.
+If you have any questions, reach out to us on [Discord](https://discord.com/invite/0glabs)
 :::
